@@ -7,7 +7,7 @@ export async function buscarPorId(id) {
     return produtos[0];
 }
 
-export async function vincuarFornededor(idProduto, idFornecedor) {
+export async function vincularProduto(idProduto, idFornecedor) {
     const sql = "update produtos set fk_id_fornecedor = ? where id_produto = ?";
 
     const [resultado] = await conexao.execute(sql, [
